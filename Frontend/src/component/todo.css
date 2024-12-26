@@ -1,0 +1,26 @@
+.active{
+    background-color: red;
+    width: 50%;
+    border: 1px,rebeccapurple; 
+        
+}
+.completed{
+    background-color: aquamarine;
+    width: 50%;
+    border: 1px,rebeccapurple; 
+    
+}
+.bt_del{
+    text-align: right;
+    width: 15%;
+    width: 50%;
+}
+.showAll{
+  
+}
+.showActive .completed{
+    display: none;
+}
+.showCompleted .active{
+    display: none;
+}

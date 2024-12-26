@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Summarizer</title>
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <script src="./assets/js/base.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>PDF Summarizer</h1>
+        <div class="upload-area">
+            <label for="pdf-upload">Click here to upload a PDF file</label>
+            <input type="file" id="pdf-upload" accept=".pdf">
+        </div>
+        <div style="text-align: center;">
+            <button onclick="generateSummary()">Generate Summary</button>
+        </div>
+        <div id="summary"></div>
+    </div>
+
+    <script>
+        function generateSummary() {
+            // This function would typically make an API call to your backend
+            // For demonstration, we'll just update the summary div with a placeholder
+            document.getElementById('summary').innerHTML = '<h3>Summary</h3><p>This is where the generated summary would appear. In a real application, this would be populated with the result from the OpenAI API after processing the uploaded PDF.</p>';
+        }
+
+        document.getElementById('pdf-upload').addEventListener('change', function(e) {
+            var fileName = e.target.files[0].name;
+            document.querySelector('.upload-area label').textContent = 'File selected: ' + fileName;
+        });
+    </script>
+</body>
+</html>
